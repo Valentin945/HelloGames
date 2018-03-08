@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="fr.epita.android.hellogames.Main2Activity">
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <TextView
+        android:id="@+id/GameInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        android:textSize="30sp"
+        android:textColor="@color/cyan"
+        android:text="@string/gameinfo"
+        android:textStyle="italic|bold"
+
+        />
+
+    <ImageView
+        android:id="@+id/imageDescription"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal"
+        app:layout_constraintTop_toBottomOf="@id/GameInfo"
+        app:layout_constraintRight_toRightOf="@id/guidelineVertical"
+        />
+
+    <LinearLayout
+        app:layout_constraintVertical_bias="0.3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameActivity2Layout"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/GameInfo"
+        app:layout_constraintLeft_toRightOf="@id/guidelineVertical"
+        android:paddingBottom="2dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/nameDescription"
+            />
+        <TextView
+            android:layout_marginLeft="4dp"
+            android:id="@+id/nameActivity2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/typeActivity2Layout"
+        app:layout_constraintTop_toBottomOf="@id/nameActivity2Layout"
+        app:layout_constraintLeft_toRightOf="@id/guidelineVertical"
+        android:paddingBottom="2dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/typeDescription"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_marginLeft="4dp"
+            android:id="@+id/typeActivity2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            />
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/nbplayerActivity2Layout"
+    app:layout_constraintTop_toBottomOf="@id/typeActivity2Layout"
+    app:layout_constraintLeft_toRightOf="@id/guidelineVertical"
+    android:orientation="horizontal"
+    android:paddingBottom="2dp"
+    >
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/nbplayerDescription"
+        />
+    <TextView
+        android:layout_marginLeft="4dp"
+        android:id="@+id/nbplayerActivity2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        />
+
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/yearActivity2Layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/nbplayerActivity2Layout"
+        app:layout_constraintLeft_toRightOf="@id/guidelineVertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yearDescription"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/yearActivity2"
+            android:layout_marginLeft="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+    
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/guidelineHorizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="20sp"
+        />
+
+
+    <Button
+        android:id="@+id/knowmore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintVertical_bias="0.8"
+        android:text="@string/more"
+        android:gravity="center"
+        />
+
+</android.support.constraint.ConstraintLayout>
